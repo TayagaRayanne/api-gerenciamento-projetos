@@ -31,7 +31,6 @@ A API utiliza o Swagger UI para fornecer uma documentação viva e interativa. N
 
 ### 2. Camada de Segurança e Autenticação
 Abaixo, demonstramos o fluxo de autenticação. A API valida as credenciais do utilizador e emite um token JWT seguro, que deve ser utilizado nas requisições subsequentes para garantir que o utilizador aceda apenas aos seus próprios dados.
-![Validação de Autenticação JWT](./screenshots/autentication_01.jpeg)
 ![Validação de Autenticação JWT](./screenshots/autentication_02.jpeg)
 ![Validação de Autenticação JWT](./screenshots/autentication_03.jpeg)
 
