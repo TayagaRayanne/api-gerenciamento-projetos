@@ -38,7 +38,6 @@ Abaixo, demonstramos o fluxo de autenticação. A API valida as credenciais do u
 Demonstração da estrutura do banco de dados SQLite. A API garante que as relações entre Utilizadores, Projetos e Tarefas sejam mantidas com integridade, permitindo a rastreabilidade e a consistência da informação.
 ![Visualização da Base de Dados SQLite](./screenshots/db_01.jpeg)
 ![Visualização da Base de Dados SQLite](./screenshots/db_02.jpeg)
-![Visualização da Base de Dados SQLite](./screenshots/db_03.jpeg)
 
 ## 🚀 Como colocar em Produção
 
