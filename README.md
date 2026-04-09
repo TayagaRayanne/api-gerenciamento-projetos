@@ -2,6 +2,25 @@
 
 A **TaskMaster API** é uma solução de backend robusta desenvolvida para otimizar o fluxo de trabalho em ambientes corporativos e escritórios. Diferente de listas de tarefas simples, esta API foca na hierarquia de dados e na segurança, permitindo que gestores e colaboradores acompanhem o progresso real de entregas através de métricas automatizadas.
 
+## 🛠️ Processo de Desenvolvimento
+
+Este projeto foi executado seguindo uma metodologia de ciclo de vida de software, garantindo que cada funcionalidade atendesse a um requisito de negócio específico.
+
+### 1. Definição do Produto (PDD)
+O desenvolvimento iniciou com a criação de um documento de definição de produto, onde foram mapeados os problemas de gestão de produtividade e as soluções necessárias (CRUD de tarefas, métricas de progresso e segurança).
+
+### 2. Modelagem Relacional
+Estruturação do banco de dados focada em integridade. Definição das relações entre Usuários e Projetos (1:N) e Projetos e Tarefas (1:N), garantindo que a exclusão de um projeto remova automaticamente suas tarefas associadas (Cascade Delete).
+
+### 3. Arquitetura e Segurança
+Implementação da base da API com FastAPI e autenticação JWT. O foco foi garantir o isolamento de dados: cada usuário autenticado só pode visualizar e manipular seus próprios registros.
+
+### 4. Lógica de Negócio e Métricas
+Desenvolvimento do motor de cálculo de progresso. A API processa dinamicamente a relação entre tarefas totais e concluídas para fornecer um feedback visual de performance ao gestor.
+
+### 5. Documentação e Qualidade
+Finalização com documentação interativa via Swagger UI e estruturação do ambiente para fácil implantação via `requirements.txt`.
+
 ## 💼 Aplicação Prática e Valor de Negócio
 
 Esta API foi desenhada para ser a "espinha dorsal" de ferramentas de produtividade. Algumas aplicações práticas incluem:
@@ -21,18 +40,18 @@ O projeto não foca apenas em funcionalidades, mas em **padrões de mercado**:
 
 ## 📊 Demonstração do Sistema
 
-Nesta secção, apresentamos o funcionamento visual da API e a validação da sua arquitetura robusta.
+Nesta seção, é apresentado o funcionamento visual da API e a validação da sua arquitetura robusta.
 
 ### 1. Interface de Documentação e Testes (Swagger UI)
 A API utiliza o Swagger UI para fornecer uma documentação viva e interativa. Note os ícones de "cadeado" ao lado dos endpoints protegidos, indicando a necessidade de autenticação Bearer Token (JWT) para acesso.
-![Interface Visual do Swagger](./screenshots/visual_swagger_01.jpeg)
+(Todos os exemplos usados na imagem são fictícios, feitos para os testes.)
+![Interface Visual do Swagger](./screenshots/visual_swagger.jpeg)
 ![Interface Visual do Swagger](./screenshots/visual_swagger_02.jpeg)
-![Interface Visual do Swagger](./screenshots/visual_swagger_03.jpeg)
 
 ### 2. Camada de Segurança e Autenticação
-Abaixo, demonstramos o fluxo de autenticação. A API valida as credenciais do utilizador e emite um token JWT seguro, que deve ser utilizado nas requisições subsequentes para garantir que o utilizador aceda apenas aos seus próprios dados.
-![Validação de Autenticação JWT](./screenshots/autentication_02.jpeg)
-![Validação de Autenticação JWT](./screenshots/autentication_03.jpeg)
+Abaixo, demonstramos o fluxo de autenticação. A API valida as credenciais do usuário e emite um token JWT seguro, que deve ser utilizado nas requisições subsequentes para garantir que o utilizador aceda apenas aos seus próprios dados.
+![Validação de Autenticação JWT](./screenshots/authentication_01.jpeg)
+![Validação de Autenticação JWT](./screenshots/authentication_02.jpeg)
 
 ### 3. Persistência e Integridade de Dados (SQLite)
 Demonstração da estrutura do banco de dados SQLite. A API garante que as relações entre Utilizadores, Projetos e Tarefas sejam mantidas com integridade, permitindo a rastreabilidade e a consistência da informação.
